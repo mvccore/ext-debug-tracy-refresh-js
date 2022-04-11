@@ -1,6 +1,6 @@
 {
   "name": "@mvccore/ext-debug-tracy-refresh-js",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "WebSocket server and client code for Tracy extension to automatic refresh of current browser tab on selected directory changes.",
   "author": {
     "name": "Tom Flídr",
