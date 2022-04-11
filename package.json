@@ -1,9 +1,20 @@
 {
   "name": "@mvccore/ext-debug-tracy-refresh-js",
   "version": "5.0.0",
-  "description": "",
-  "author": "",
-  "license": "BSD-3-Clause",
+  "description": "WebSocket server and client code for Tracy extension to automatic refresh of current browser tab on selected directory changes.",
+  "author": {
+    "name": "Tom Flídr",
+    "email": "tomflidr@gmail.com",
+    "url": "https://github.com/tomFlidr"
+  }
+  "license": "BSD-3",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mvccore/ext-debug-tracy-refresh-js.git"
+  },
   "scripts": {
     "prepublish": "npm run build",
     "build": "tsc"
