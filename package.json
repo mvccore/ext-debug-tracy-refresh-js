@@ -1,25 +1,15 @@
 {
-  "name": "autorefresh",
-  "version": "1.0.0",
+  "name": "@mvccore/ext-debug-tracy-refresh-js",
+  "version": "5.0.0",
   "description": "",
   "author": "",
-  "license": "ISC",
-  "main": "js/index.js",
+  "license": "BSD-3-Clause",
   "scripts": {
-    "postinstall": "copy-files-from-to",
     "prepublish": "npm run build",
-    "build": "tsc",
-    "start": "node js/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc"
   },
-  "copyFiles": [
-    {
-      "from": "node_modules/ajax-min/builds/latest/ajax.min.js",
-      "to": "ts/src/ajax.min.js"
-    }
-  ],
   "dependencies": {
-    "ajax-min": "^1.0.9",
+    "chokidar": "^3.5.3",
     "tslib": "^2.3.1",
     "web-dev-server": "^3.0.27",
     "ws": "^8.5.0"
@@ -27,7 +17,6 @@
   "devDependencies": {
     "@types/node": "^17.0.23",
     "@types/ws": "^8.5.3",
-    "copy-files-from-to": "^3.2.2",
     "typescript": "^4.6.3"
   }
 }
