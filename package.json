@@ -6,7 +6,7 @@
     "name": "Tom Flídr",
     "email": "tomflidr@gmail.com",
     "url": "https://github.com/tomFlidr"
-  }
+  },
   "license": "BSD-3",
   "publishConfig": {
     "access": "public"
