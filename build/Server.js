@@ -479,8 +479,8 @@ var server = WebDevServer.Server.CreateNew();
 var app = new App(server);
 server
     .SetDocumentRoot(__dirname)
-    .SetPort(parseInt(process.argv[2], 10))
-    .SetHostname('127.0.0.1')
+    .SetHostname(process.argv[2])
+    .SetPort(parseInt(process.argv[3], 10))
     .SetDevelopment(!false)
     .Start(function (success, err) {
     if (success) {

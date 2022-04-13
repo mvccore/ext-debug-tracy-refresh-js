@@ -511,7 +511,7 @@ var DebugRefreshPanel = /** @class */ (function () {
     DebugRefreshPanel.prototype.getWsUrl = function () {
         //var proto = location.protocol === 'https:' ? 'wss:' : 'ws:';
         var proto = 'ws:';
-        return proto + "//" + this.static.WS_ADDRESS_IP + ":" + this.options.port + "/ws?browserTabId=" + this.data.browserTabId;
+        return proto + "//" + this.options.address + ":" + this.options.port + "/ws?browserTabId=" + this.data.browserTabId;
     };
     DebugRefreshPanel.prototype.getAjaxUrl = function () {
         return "?" + this.options.startMonitoringParam + "=1&XDEBUG_SESSION_STOP=1";
@@ -624,7 +624,6 @@ var DebugRefreshPanel = /** @class */ (function () {
     DebugRefreshPanel.DATA_STORRAGE_KEY_END = 'refresh-data';
     DebugRefreshPanel.WS_ERR_STARTS_DELAY = 1000; // try to start next time after 1 second
     DebugRefreshPanel.WS_ERR_STARTS_CNT = 5; // try to start 5× times
-    DebugRefreshPanel.WS_ADDRESS_IP = '127.0.0.1'; // [::1];
     DebugRefreshPanel.CLS_PASSIVE = 'passive';
     DebugRefreshPanel.CLS_ACTIVE = 'active';
     DebugRefreshPanel.CLS_WAIT = 'wait';

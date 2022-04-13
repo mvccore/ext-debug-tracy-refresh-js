@@ -5,7 +5,6 @@ class DebugRefreshPanel {
 	public static readonly DATA_STORRAGE_KEY_END: string = 'refresh-data';
 	public static readonly WS_ERR_STARTS_DELAY: number = 1000; // try to start next time after 1 second
 	public static readonly WS_ERR_STARTS_CNT: number = 5; // try to start 5× times
-	public static readonly WS_ADDRESS_IP: string = '127.0.0.1'; // [::1];
 	public static readonly CLS_PASSIVE: string = 'passive';
 	public static readonly CLS_ACTIVE: string = 'active';
 	public static readonly CLS_WAIT: string = 'wait';
@@ -369,7 +368,7 @@ class DebugRefreshPanel {
 	protected getWsUrl (): string {
 		//var proto = location.protocol === 'https:' ? 'wss:' : 'ws:';
 		var proto = 'ws:';
-		return `${proto}//${this.static.WS_ADDRESS_IP}:${this.options.port}/ws?browserTabId=${this.data.browserTabId}`;
+		return `${proto}//${this.options.address}:${this.options.port}/ws?browserTabId=${this.data.browserTabId}`;
 	}
 	protected getAjaxUrl (): string {
 		return `?${this.options.startMonitoringParam}=1&XDEBUG_SESSION_STOP=1`;

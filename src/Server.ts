@@ -1,7 +1,6 @@
 import chokidar from 'chokidar';
 import * as WebDevServer from "web-dev-server";
 import WebSocket from "ws";
-type AnymatchFn = (testString: string) => boolean;
 class App {
 	public static readonly SERVER_LIFE_TIME: number = 60000; // stop webserver after 60 seconds without any connection or any http request
 	public static readonly MONITORING_LIFE_TIME: number = 30000; // stop webserver after 30 seconds without any connection or any http request
@@ -295,8 +294,8 @@ var server = WebDevServer.Server.CreateNew();
 var app = new App(server);
 server
 	.SetDocumentRoot(__dirname)
-	.SetPort(parseInt(process.argv[2], 10))
-	.SetHostname('127.0.0.1')
+	.SetHostname(process.argv[2])
+	.SetPort(parseInt(process.argv[3], 10))
 	.SetDevelopment(!false)
 	.Start((success, err) => {
 		if (success) {
