@@ -58,5 +58,4 @@ Temporary Items
 *.njsproj.user
 package-lock.json
 node_modules
-ts/src/ajax.*
-js/*
+*.code-workspace
