@@ -53,6 +53,9 @@ Temporary Items
 .hgtags
 
 # Project files
+.vs
+*.njsproj
+*.njsproj.user
 package-lock.json
 node_modules
 ts/src/ajax.*
