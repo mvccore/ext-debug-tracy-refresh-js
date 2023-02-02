@@ -366,9 +366,10 @@ class DebugRefreshPanel {
 		return this;
 	}
 	protected getWsUrl (): string {
-		//var proto = location.protocol === 'https:' ? 'wss:' : 'ws:';
-		var proto = 'ws:';
-		return `${proto}//${this.options.address}:${this.options.port}/ws?browserTabId=${this.data.browserTabId}`;
+		var proto = location.protocol === 'https:' ? 'wss:' : 'ws:',
+			port = this.options.port,
+			portStr = (port === 80 || port === 443) ? '' : ':' + port;
+		return `${proto}//${this.options.address}${portStr}/ws?browserTabId=${this.data.browserTabId}`;
 	}
 	protected getAjaxUrl (): string {
 		return `?${this.options.startMonitoringParam}=1&XDEBUG_SESSION_STOP=1`;
