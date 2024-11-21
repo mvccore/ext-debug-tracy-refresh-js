@@ -1,6 +1,6 @@
 {
   "name": "@mvccore/ext-debug-tracy-refresh-js",
-  "version": "5.0.3",
+  "version": "5.3.0",
   "description": "MvcCore - Extension - Debug - Tracy - Panel Refresh - Javascripts - automatic refresh of current browser tab on selected server directory changes - assets files.",
   "author": {
     "name": "Tom Flídr",
